@@ -16,6 +16,18 @@
       ],
       "depNameTemplate": "element-hq/synapse",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.github/workflows/build.yml$",
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "https://github.com/matrix-org/synapse-s3-storage-provider/archive/refs/tags/(?<currentValue>.*?).zip"
+      ],
+      "depNameTemplate": "matrix-org/synapse-s3-storage-provider",
+      "datasourceTemplate": "github-releases"
     }
   ],
   "packageRules": [
